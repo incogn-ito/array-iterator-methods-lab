@@ -86,7 +86,9 @@ let inventorNames = []
 
 // Enter your solution code here:
 
-
+inventorNames = inventors.map((inventor) => {
+    return `first: ${(first)}, last: ${(last)}` 
+})
 
 // Check your return value:
 console.log('Exercise 2 My Result: ', inventorNames)
