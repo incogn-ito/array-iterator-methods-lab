@@ -87,7 +87,7 @@ let inventorNames = []
 // Enter your solution code here:
 
 inventorNames = inventors.map((inventor) => {
-    return `first: ${(first)}, last: ${(last)}` 
+    return `first: ${inventor.first}, last: ${inventor.last}` 
 })
 
 // Check your return value:
@@ -109,7 +109,6 @@ console.log('Exercise 2 Correct Result: ',
     ]
 )
 
-/*
 
 // Array.prototype.sort()
 
@@ -119,7 +118,9 @@ let sortedByBirthYear = []
 
 // Enter your solution code here:
 
-
+sortedByBirthYear = inventors.sort((inventor) => {
+    return (inventor.year)
+})
 
 // Check your return value:
 console.log('Exercise 3 My Result: ', sortedByBirthYear)
@@ -141,6 +142,8 @@ console.log('Exercise 3 Correct Result: ',
 )
 
 // Array.prototype.find()
+
+/*
 
 // 4. Use Array.prototype.find() to identify the inventor with the first name 'Ada' from an array of inventor objects
 
