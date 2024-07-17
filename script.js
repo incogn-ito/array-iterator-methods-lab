@@ -57,14 +57,11 @@ const inventors = [
 
 let veryOldInventors = []
 
-const sampleInventors = veryOldInventors.filter((inventor) => {
-    return inventor.year < 1599 && inventor.year > 1500
-})
-
 // Enter your solution code here:
 
-
-
+veryOldInventors = inventors.filter((inventor) => {
+    return inventor.year < 1599 && inventor.year > 1500
+})
 // Check your return value:
 console.log('Exercise 1 My Result: ', veryOldInventors)
 console.log('Exercise 1 Correct Result: ',
@@ -74,7 +71,7 @@ console.log('Exercise 1 Correct Result: ',
     ]
 )
 
-/*
+
 // Array.prototype.map()
 
 // 2. Map the array of inventors into a new array. This new array should only contain objects with the inventors' first and last names.
@@ -110,6 +107,7 @@ console.log('Exercise 2 Correct Result: ',
     ]
 )
 
+/*
 
 // Array.prototype.sort()
 
