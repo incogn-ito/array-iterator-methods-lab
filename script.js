@@ -60,7 +60,7 @@ let veryOldInventors = []
 // Enter your solution code here:
 
 veryOldInventors = inventors.filter((inventor) => {
-    return inventor.year < 1599 && inventor.year > 1500
+    return inventor.year <= 1599 && inventor.year >= 1500
 })
 // Check your return value:
 console.log('Exercise 1 My Result: ', veryOldInventors)
@@ -183,10 +183,14 @@ let firstLast = []
 
 // Enter your solution code here:
 
-inventorNamedAda = array.find((element ) => {
-    return 
+firstLast = people.map((person) => { 
+    let myArray = person.split(',')
+    return  `${myArray} ${myArray}`
 })
 
+// firstLast = array.find((element ) => {
+//     return 
+// })
 
 
 // Check your return value:
@@ -235,4 +239,54 @@ console.log('Exercise 5 Correct Result: ',
         'William Blake'
     ]
 )
+
+// Array.prototype.some()
+
+// 6. Determine if there is at least one person in the devs array who is 18 years old or older.
+
+// - You have an array of people with their respective ages.
+// - Use the Array.prototype.some() method to check if any person in the array is 18 years old or older.
+// - Store the result (true or false) in the variable 'isAdultPresent'. 
+
+let isAdultPresent = null
+
+// Enter your solution code here:
+
+
+isAdultPresent = devs.some((dev) => {
+    return (2024 - dev.year) >= 18
+})
+
+// // Can I also do it like this?
+// isAdultPresent = devs.some((dev) => {
+    // let isOlder = (2024 - dev.year)
+//     return isOlder >= 18    ANSWER -- yes!
+// })
+
+// Check your return value:
+console.log('Exercise 6 My Result: ', isAdultPresent)
+console.log('Exercise 6 Correct Result: ', true)
+
+
+// Array.prototype.every()
+
+// 7. Use Array.prototype.every() to determine if every person in the devs array is 19 years old or older.
+
+// - You have an array of individuals, each with their year of birth represented by the 'year' property.
+// - Use the Array.prototype.every() method to verify if every individual in the array is at least 19 years old.
+// - Store the result (true or false) in the variable 'isEveryone19OrOlder'.
+
+let isEveryone19OrOlder = null
+
+// Enter your solution code here:
+
+isEveryone19OrOlder = devs.every((dev) => {
+    let isMature = (2024 - dev.year)
+    return isMature >= 19
+})
+
+
+// Check your return value:
+console.log('Exercise 7 My Result: ', isEveryone19OrOlder)
+console.log('Exercise 7 Correct Result: ', false)
 
