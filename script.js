@@ -290,3 +290,67 @@ isEveryone19OrOlder = devs.every((dev) => {
 console.log('Exercise 7 My Result: ', isEveryone19OrOlder)
 console.log('Exercise 7 Correct Result: ', false)
 
+// Array.prototype.find()
+
+// 8. Use Array.prototype.find() to identify and retrieve the comment object with a specific ID 823423 from an array of comment objects.
+
+// - Assign the found comment object to the variable 'commentById'.
+
+
+let commentById = {}
+
+// Enter your solution code here:
+
+
+
+commentById = comments.find((comment) => {
+    return comment.id === 823423
+})
+
+// comment object with a specific ID 823423 
+
+// Check your return value:
+console.log('Exercise 8 My Result: ', commentById)
+console.log('Exercise 8 Correct Result: ', { text: 'Super good', id: 823423 })
+
+// Array.prototype.findIndex()
+
+// 9. Determine the index of the comment that has a specific ID 123523 in an array of comment objects.
+
+// - Store the index in the variable 'idx'.
+
+let idx = null
+
+// Enter your solution code here:
+
+
+idx = comments.findIndex((comment) => {
+    return comment.id === 123523
+})
+
+// Check your return value:
+console.log('Exercise 9 My Result: ', idx)
+console.log('Exercise 9 Correct Result: ', 3)
+
+
+/*
+const travelMethods = [
+    'car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van',
+    'bike', 'walk', 'car', 'van', 'car', 'truck'
+  ];
+  
+  const devs = [
+    { name: 'Alex', year: 1988 },
+    { name: 'Dani', year: 1986 },
+    { name: 'Matt', year: 1970 },
+    { name: 'Wes', year: 2015 }
+  ];
+  
+  const comments = [
+    0 { text: 'Love this!', id: 523423 },
+    1 { text: 'Super good', id: 823423 },
+    2 { text: 'You are the best', id: 2039842 },
+    { text: 'Ramen is my fav food ever', id: 123523 },
+    { text: 'Nice Nice Nice!', id: 542328 }
+  ];
+  */
